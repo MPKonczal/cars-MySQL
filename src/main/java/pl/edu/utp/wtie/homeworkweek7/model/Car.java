@@ -1,18 +1,22 @@
 package pl.edu.utp.wtie.homeworkweek7.model;
 
-import pl.edu.utp.wtie.homeworkweek7.model.enumeration.Color;
-import pl.edu.utp.wtie.homeworkweek7.model.enumeration.Mark;
-
 public class Car {
 
     private long carId;
-    private Mark mark;
+    private String mark;
     private String model;
-    private Color color;
+    private String color;
     private int productionYear;
 
-    public Car(long carId, Mark mark, String model, Color color, int productionYear) {
+    public Car(long carId, String mark, String model, String color, int productionYear) {
         this.carId = carId;
+        this.mark = mark;
+        this.model = model;
+        this.color = color;
+        this.productionYear = productionYear;
+    }
+
+    public Car(String mark, String model, String color, int productionYear) {
         this.mark = mark;
         this.model = model;
         this.color = color;
@@ -31,15 +35,13 @@ public class Car {
         this.carId = carId;
     }
 
-
-    public Mark getMark() {
+    public String getMark() {
         return mark;
     }
 
-    public void setMark(Mark mark) {
+    public void setMark(String mark) {
         this.mark = mark;
     }
-
 
     public String getModel() {
         return model;
@@ -49,17 +51,15 @@ public class Car {
         this.model = model;
     }
 
-
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
-
-    public long getProductionYear() {
+    public int getProductionYear() {
         return productionYear;
     }
 
